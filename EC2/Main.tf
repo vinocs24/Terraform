@@ -1,9 +1,5 @@
 resource "aws_vpc" "default" {
-    cidr_block = var.vpc_cidr_block
-
-    tags = {
-       Name = "wp-pvc-tf"
-    }
+  
 }
 
 resource "aws_subnet" "wp-public-tf" {
