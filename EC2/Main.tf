@@ -1,3 +1,11 @@
+resource "aws_vpc" "default" {
+    cidr_block = var.vpc_cidr_block
+
+    tags = {
+       Name = "wp-pvc-tf"
+    }
+}
+
 resource "aws_subnet" "wp-public-tf" {
     vpc_id            = aws_vpc.default.id
     cidr_block        = var.public_subnet_cidr_block
