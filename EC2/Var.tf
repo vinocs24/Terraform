@@ -22,3 +22,8 @@ variable "instance_type" {
   description = "EC2 instance type"
   default = "t2.micro"
 }
+
+variable "public_subnet_cidr_block" {
+  description = "Public Subnet"
+  default     = "10.1.1.0/24"
+}
