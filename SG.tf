@@ -1,7 +1,3 @@
-resource "aws_vpc" "default" {
-  
-}
-
 # SG
 
 resource "aws_security_group" "wp-sg-tf" {
