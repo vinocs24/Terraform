@@ -4,7 +4,7 @@ resource "aws_instance" "ec2-instance" {
     ami                         = var.ami
     instance_type               = var.instance_type
     availability_zone           = "us-west-2a"
-    subnet_id                   = var.aws_subnet.wp-public-tf.id
+    subnet_id                   = ["var.aws_subnet.wp-public-tf.id"]
     key_name                    = var.key_name
     associate_public_ip_address = true
     security_groups             = ["var.aws_security_group.wp-sg-tf.id"]
